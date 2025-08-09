@@ -416,12 +416,6 @@ function addKeepsakeFeatures() {
     const keepsakeDiv = document.createElement('div');
     keepsakeDiv.className = 'fixed bottom-4 left-4 z-50 space-x-2';
     keepsakeDiv.innerHTML = `
-        <button onclick="captureScreenshot()" class="bg-pink-500 text-white p-3 rounded-full shadow-lg hover:bg-pink-600 transition-colors" title="Take Screenshot">
-            📸
-        </button>
-        <button onclick="generateKeepsake()" class="bg-purple-500 text-white p-3 rounded-full shadow-lg hover:bg-purple-600 transition-colors" title="Download Keepsake">
-            💾
-        </button>
         <button onclick="resetVisitCounter()" class="bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition-colors" title="Reset Visit Counter (Admin Only)">
             🔄
         </button>
@@ -743,3 +737,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('💖 Love Story Initialized for Mama Ariyana! 💖');
 
 });
+
