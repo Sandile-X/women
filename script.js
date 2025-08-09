@@ -14,14 +14,14 @@ const storyChapters = [
         photo: "us3.jpg", // Second story image
         interactive: true, // This chapter has interactive elements
         quiz: {
-            question: "What's my favorite thing about Mama Ariyana?",
+            question: "What's my favorite thing about Immy?",
             options: ["Your beautiful smile", "Your kind heart", "Everything about you"],
             correct: 2
         }
     },
     {
         title: "Growing Together",
-        content: "Through every season, every challenge, and every joy, we've grown stronger together, Mama Ariyana. You've shown me what it means to truly love and be loved unconditionally.",
+        content: "Through every rainy or sunny season, every challenge, and every joy, we've grown stronger together, Immy. You've shown me what it means to truly love and be loved unconditionally.",
         photo: "us4.jpg", // Third story image
         surprise: "You are my strength, my inspiration, and my forever love! 💖"
     },
@@ -741,4 +741,5 @@ document.head.appendChild(additionalStyle);
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     console.log('💖 Love Story Initialized for Mama Ariyana! 💖');
+
 });
