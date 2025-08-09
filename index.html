@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Women's Day & Anniversary, My Love 💖</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'cursive': ['Dancing Script', 'cursive'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        'rose-pink': '#ff9ac1',
+                        'soft-pink': '#ffc1e3',
+                        'blush': '#ffe1f0',
+                        'lavender': '#e6e6ff'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-100 via-rose-50 to-purple-100 overflow-x-hidden">
+    <!-- Background Music -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="beat.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Music Controls -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+        <button id="musicToggle" class="text-pink-500 hover:text-pink-600 transition-colors">
+            <i class="fas fa-music text-xl"></i>
+        </button>
+        <input type="range" id="volumeSlider" min="0" max="100" value="50" class="w-20 accent-pink-500">
+    </div>
+    <!-- Floating hearts animation -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="heart heart-1">💖</div>
+        <div class="heart heart-2">💕</div>
+        <div class="heart heart-3">💝</div>
+        <div class="heart heart-4">🌸</div>
+        <div class="heart heart-5">🌺</div>
+        <div class="heart heart-6">💗</div>
+        <div class="heart heart-7">🌷</div>
+        <div class="heart heart-8">💐</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 relative z-10">
+        <!-- Header with sparkles -->
+        <div class="text-center mb-8">
+            <h1 class="font-cursive text-5xl md:text-7xl text-pink-600 mb-4 drop-shadow-lg">
+                <span class="sparkle">✨</span>
+                My Beautiful Queen Mama Ariyana
+                <span class="sparkle">✨</span>
+            </h1>
+            <p class="text-xl text-pink-500 font-sans font-light">Happy Women's Day & Our Anniversary</p>
+        </div>
+
+        <!-- Main Content Card -->
+        <div class="max-w-4xl mx-auto">
+            <div id="gameContainer" class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border-4 border-pink-200">
+                
+                <!-- Welcome Screen -->
+                <div id="welcomeScreen" class="text-center">
+                    <div class="mb-8">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-pink-300 shadow-2xl glow">
+                            <img src="us.jpg" alt="Our Beautiful Love" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h2 class="font-cursive text-4xl text-pink-600 mb-4">Welcome to Our Love Story, Mama Ariyana</h2>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            Today marks not just Women's Day, but also another beautiful milestone in our journey together. 
+                            I've created something special just for you, my queen. Are you ready to take a walk down memory lane?
+                        </p>
+                    </div>
+                    
+                    <button id="startBtn" class="btn-primary">
+                        <i class="fas fa-heart mr-2"></i>
+                        Begin Our Story
+                        <i class="fas fa-heart ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Story Content (Hidden initially) -->
+                <div id="storyContent" class="hidden">
+                    <div id="storyText" class="text-center mb-8">
+                        <!-- Story will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="flex justify-center space-x-4">
+                        <button id="prevBtn" class="btn-secondary hidden">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Previous
+                        </button>
+                        <button id="nextBtn" class="btn-primary">
+                            Next
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Final Invitation Screen (Hidden initially) -->
+                <div id="invitationScreen" class="hidden text-center">
+                    <div class="mb-8">
+                        <div class="text-8xl mb-6">💐</div>
+                        <h2 class="font-cursive text-4xl text-pink-600 mb-6">A Special Invitation</h2>
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                            My love, would you like to celebrate this special day with a romantic lunch date? 
+                            Just the two of us, creating more beautiful memories together...
+                        </p>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-6">
+                        <button id="yesBtn" class="btn-yes">
+                            <i class="fas fa-heart mr-2"></i>
+                            Yes, I'd Love To! 💕
+                        </button>
+                        <button id="noBtn" class="btn-no">
+                            <i class="fas fa-calendar-times mr-2"></i>
+                            Maybe Another Time
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Loading Screen (Hidden initially) -->
+                <div id="loadingScreen" class="hidden text-center">
+                    <div class="animate-spin text-6xl mb-4">💖</div>
+                    <p class="text-xl text-pink-600">Sending your response...</p>
+                </div>
+
+                <!-- Thank You Screen (Hidden initially) -->
+                <div id="thankYouScreen" class="hidden text-center">
+                    <div class="text-8xl mb-6">🥰</div>
+                    <h2 class="font-cursive text-4xl text-pink-600 mb-4">Response Sent!</h2>
+                    <p class="text-lg text-gray-700">I've received your answer. I love you so much, my beautiful queen! 💖</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-pink-500">
+        <p class="font-cursive text-lg">Made with 💖 by Your Loving Partner</p>
+        <p class="text-sm mt-2">Happy Women's Day 2025 & Happy Anniversary!</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
